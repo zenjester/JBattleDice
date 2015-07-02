@@ -33,7 +33,7 @@ public class dieRollTest {
     @Test
     public void testRollResult() {
         System.out.println("rollResult");
-        int value = 6;
+        int value = 5;
         dieRoll instance = new dieRoll();
         int result = instance.rollResult(value);
         assertTrue((result >0) && (result < 7));
