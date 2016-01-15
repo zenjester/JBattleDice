@@ -9,21 +9,19 @@ package jbattledice;
 import java.util.Random;
 
 /**
- *
  * @author andrew
  */
 public class dieRoll {
-   
-    private int roll;
+
     private final Random rand;
+    private int roll;
 
     public dieRoll() {
         this.rand = new Random();
     }
-    
-    public int rollResult(int value)
-    {
-       roll = rand.nextInt(value)+1;
-       return roll;
+
+    public int rollResult(int value) {
+        roll = rand.nextInt(value) + 1;
+        return roll;
     }
 }

@@ -8,21 +8,21 @@ package jbattledice;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertTrue;
 
 /**
- *
  * @author andrew
  */
 public class dieRollTest {
-    
+
     public dieRollTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
@@ -36,8 +36,8 @@ public class dieRollTest {
         int value = 5;
         dieRoll instance = new dieRoll();
         int result = instance.rollResult(value);
-        assertTrue((result >0) && (result < 7));
+        assertTrue((result > 0) && (result < 7));
         // TODO review the generated test code and remove the default call to fail.
     }
-    
+
 }
