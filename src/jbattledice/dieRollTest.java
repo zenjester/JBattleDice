@@ -1,15 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package jbattledice;
 
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import static org.junit.Assert.assertTrue;
 
 /**
  * @author andrew
@@ -34,9 +28,10 @@ public class dieRollTest {
     public void testRollResult() {
         System.out.println("rollResult");
         int value = 5;
-        dieRoll instance = new dieRoll();
+        dieRoll instance;
+        instance = new dieRoll();
         int result = instance.rollResult(value);
-        assertTrue((result > 0) && (result < 7));
+        Assert.assertTrue("It workd", ((result > 0) && (result < 7)));
         // TODO review the generated test code and remove the default call to fail.
     }
 

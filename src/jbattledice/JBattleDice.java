@@ -1,52 +1,49 @@
-/* hope this shit works
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package jbattledice;
 
 import javax.swing.*;
+import java.awt.ComponentOrientation;
+import java.awt.Container;
+import java.awt.GridLayout;
 
-/**
- * @author andrew
- */
 
-
-//Create and set up the window.
-//Create and set up the window.
 public class JBattleDice {
+    public final static boolean RIGHT_TO_LEFT = false;
 
-    /**
-     * @param args the command line arguments
-     */
+    public static void addComponentsToPane(Container contentPane) {
+        if (RIGHT_TO_LEFT) {
+            contentPane.setComponentOrientation(
+                    ComponentOrientation.RIGHT_TO_LEFT);
+        }
+//        Any number of rows and 2 columns
+        dieRoll currentVal = new dieRoll();
+        contentPane.setLayout(new GridLayout(0,2));
+        String lbl1Txt ="the number rolled is ";
+
+        contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(6)));
+        contentPane.add(new JButton("JButton 2"));
+        contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(4)));
+        contentPane.add(new JTextField("Long-Named JTextField 4"));
+        contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(10)));
+    }
+
+    private static void createAndShowGUI() {
+        JFrame.setDefaultLookAndFeelDecorated(true);
+
+        JFrame frame = new JFrame("GridLayout Source Demo");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //Set up the content pane and components in GridLayout
+        addComponentsToPane(frame.getContentPane());
+
+        frame.pack();
+        frame.setVisible(true);
+    }
+
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI();
             }
-
         });
     }
-
-    private static void createAndShowGUI() {
-        //Create and set up the window.
-        JFrame frame = new JFrame("TextDemo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        //Create and set up the content pane.
-        JComponent newContentPane = new dispGui();
-        newContentPane.setOpaque(true); //content panes must be opaque
-        frame.setContentPane(newContentPane);
-
-        //Display the window.
-        frame.pack();
-        frame.setVisible(true);
-    }
 }
-
-
-
-    
-
-
