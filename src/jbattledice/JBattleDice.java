@@ -1,9 +1,7 @@
 package jbattledice;
 
 import javax.swing.*;
-import java.awt.ComponentOrientation;
-import java.awt.Container;
-import java.awt.GridLayout;
+import java.awt.*;
 
 
 public class JBattleDice {
@@ -29,8 +27,9 @@ public class JBattleDice {
     private static void createAndShowGUI() {
         JFrame.setDefaultLookAndFeelDecorated(true);
 
-        JFrame frame = new JFrame("GridLayout Source Demo");
+        JFrame frame = new JFrame("BattleDice");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.getContentPane().setPreferredSize(new Dimension(400, 300));
 
         //Set up the content pane and components in GridLayout
         addComponentsToPane(frame.getContentPane());
