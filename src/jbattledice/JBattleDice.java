@@ -12,13 +12,17 @@ public class JBattleDice {
             contentPane.setComponentOrientation(
                     ComponentOrientation.RIGHT_TO_LEFT);
         }
-//        Any number of rows and 2 columns
+//       Any number of rows and 2 columns
         dieRoll currentVal = new dieRoll();
         contentPane.setLayout(new GridLayout(0,2));
         String lbl1Txt ="the number rolled is ";
+        JLabel myForce = new JLabel(lbl1Txt+currentVal.rollResult(6));
+        myForce.setOpaque(true);
+      myForce.setBackground(Color.GRAY);
+        myForce.setForeground(Color.WHITE);        JLabel compForce = new JLabel(lbl1Txt+currentVal.rollResult(6));
 
-        contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(6)));
-        contentPane.add(new JButton("JButton 2"));
+        contentPane.add(myForce);
+        contentPane.add(compForce);
         contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(4)));
         contentPane.add(new JTextField("Long-Named JTextField 4"));
         contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(10)));
