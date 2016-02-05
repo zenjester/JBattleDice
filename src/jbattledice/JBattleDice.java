@@ -13,20 +13,22 @@ public class JBattleDice {
                     ComponentOrientation.RIGHT_TO_LEFT);
         }
 //       Any number of rows and 2 columns
+        char [] computer;
+        char [] humanForce;
         dieRoll currentVal = new dieRoll();
-        enemyForceGen eForce = new enemyForceGen();
+        gameModule currentGame = new gameModule();
         contentPane.setLayout(new GridLayout(0,2));
         String lbl1Txt ="the number rolled is ";
-        JLabel myForce = new JLabel(lbl1Txt+currentVal.rollResult(6));
-        myForce.setOpaque(true);
-      myForce.setBackground(Color.GRAY);
+        JLabel myForce = new JLabel(currentGame.genResult());
+       myForce.setOpaque(true);
+        myForce.setBackground(Color.GRAY);
         myForce.setForeground(Color.WHITE);
-        JLabel compForce = new JLabel(lbl1Txt+currentVal.rollResult(6));
+        JLabel compForce = new JLabel(currentGame.genResult());
 
         contentPane.add(myForce);
         contentPane.add(compForce);
         contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(4)));
-        contentPane.add(new JTextField(eForce.genResult()));
+        contentPane.add(new JTextField(currentGame.genResult()));
         contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(10)));
     }
 

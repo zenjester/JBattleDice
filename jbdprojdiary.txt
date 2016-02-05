@@ -1,2 +1,4 @@
 23.07.14 welcoem to the jbattledice project diary
 02.07.15 here  we go again new laptop new linux
+04.02.16 generating the enemy force do I need a string or an array going with string first
+05.02.16 refactor enemyForceGen
