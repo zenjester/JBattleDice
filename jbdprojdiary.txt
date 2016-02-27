@@ -2,3 +2,4 @@
 02.07.15 here  we go again new laptop new linux
 04.02.16 generating the enemy force do I need a string or an array going with string first
 05.02.16 refactor enemyForceGen
+27.02.16 switch to netbeans

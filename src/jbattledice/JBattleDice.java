@@ -20,10 +20,14 @@ public class JBattleDice {
         contentPane.setLayout(new GridLayout(0,2));
         String lbl1Txt ="the number rolled is ";
         JLabel myForce = new JLabel(currentGame.genResult());
-       myForce.setOpaque(true);
+        myForce.setOpaque(true);
         myForce.setBackground(Color.GRAY);
         myForce.setForeground(Color.WHITE);
         JLabel compForce = new JLabel(currentGame.genResult());
+        //test compForce colors
+        compForce.setOpaque(true);
+        compForce.setBackground(Color.BLUE);
+        compForce.setForeground(Color.CYAN);
 
         contentPane.add(myForce);
         contentPane.add(compForce);
