@@ -3,7 +3,7 @@ package jbattledice;
 import javax.swing.*;
 import java.awt.*;
 
-
+//test comment
 public class JBattleDice {
     public final static boolean RIGHT_TO_LEFT = false;
 
