@@ -1,5 +1,7 @@
 package jbattledice;
 
+//new fed box
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -18,7 +20,9 @@ public class JBattleDice {
         dieRoll currentVal = new dieRoll();
         gameModule currentGame = new gameModule();
         contentPane.setLayout(new GridLayout(0,2));
-        String lbl1Txt ="the number rolled is ";
+        String dieLbl1Txt ="the number rolled is ";
+        String msgLblTxt = "Please enter your Choices in this box";
+       
         JLabel myForce = new JLabel(currentGame.genResult());
         myForce.setOpaque(true);
         myForce.setBackground(Color.GRAY);
@@ -54,8 +58,8 @@ public class JBattleDice {
         contentPane.add(compForce);
         contentPane.add(msgLbl);
         contentPane.add(rollAreaLbl);
-        contentPane.add(new JLabel(lbl1Txt+currentVal.rollResult(4)));
-        contentPane.add(new JTextField(currentGame.genResult()));
+        contentPane.add(new JTextField(msgLblTxt));
+        contentPane.add(new JLabel(dieLbl1Txt+currentVal.rollResult(4)));
         contentPane.add(controlPanel);
         contentPane.add(controlPanel1);
         
