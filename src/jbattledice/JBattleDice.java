@@ -30,7 +30,8 @@ public class JBattleDice {
         JLabel compForce = new JLabel(currentGame.genResult());
         JLabel playerLbl = new JLabel("Player");
         JLabel computerLbl = new JLabel("Computer");
-        JLabel msgLbl = new JLabel("Message Area");
+        JTextArea msgArea = new JTextArea(msgLblTxt);
+        //JLabel msgLbl = new JLabel("Message Area"); depreceated
         JLabel rollAreaLbl = new JLabel("Roll Area");
         JButton yesBttn = new JButton("Yes");
         JButton noBttn = new JButton("No");
@@ -56,7 +57,7 @@ public class JBattleDice {
         contentPane.add(computerLbl);
         contentPane.add(myForce);
         contentPane.add(compForce);
-        contentPane.add(msgLbl);
+        contentPane.add(msgArea);
         contentPane.add(rollAreaLbl);
         contentPane.add(new JTextField(msgLblTxt));
         contentPane.add(new JLabel(dieLbl1Txt+currentVal.rollResult(4)));
