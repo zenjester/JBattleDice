@@ -31,7 +31,8 @@ public class JBattleDice {
         JLabel playerLbl = new JLabel("Player");
         JLabel computerLbl = new JLabel("Computer");
         JTextArea msgArea = new JTextArea(msgLblTxt);
-        //JLabel msgLbl = new JLabel("Message Area"); depreceated
+        msgArea.setEditable(false);
+        JLabel msgLbl = new JLabel("Message Area");
         JLabel rollAreaLbl = new JLabel("Roll Area");
         JButton yesBttn = new JButton("Yes");
         JButton noBttn = new JButton("No");
