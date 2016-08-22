@@ -22,7 +22,8 @@ public class JBattleDice {
         contentPane.setLayout(new GridLayout(0,2));
         String dieLbl1Txt ="the number rolled is ";
         String msgLblTxt = "Please enter your Choices in this box";
-       
+        JPanel compPanel = new JPanel();
+        JPanel playerPanel = new JPanel();
         JLabel myForce = new JLabel(currentGame.genResult());
         myForce.setOpaque(true);
         myForce.setBackground(Color.GRAY);
@@ -33,12 +34,17 @@ public class JBattleDice {
         JTextArea msgArea = new JTextArea(msgLblTxt);
         msgArea.setEditable(false);
         JLabel msgLbl = new JLabel("Message Area");
+        
         JLabel rollAreaLbl = new JLabel("Roll Area");
         JButton yesBttn = new JButton("Yes");
         JButton noBttn = new JButton("No");
         JButton quitBttn = new JButton("Quit");
         JButton saveBttn = new JButton("Save");
         JButton endTurnBttn = new JButton("End Turn");
+       
+        
+        //control panel code
+ 
         JPanel controlPanel = new JPanel();
         JPanel controlPanel1= new JPanel();
         controlPanel.add(yesBttn);
@@ -47,7 +53,19 @@ public class JBattleDice {
         controlPanel1.add(saveBttn);
         controlPanel1.add(endTurnBttn);
         
+        //player panel code
+        playerPanel.setLayout(new GridLayout(2,6));
+        JLabel GeneralLbl= new JLabel("General");
+        playerPanel.add(GeneralLbl);
+        playerPanel.add(myForce);
+        JLabel InfantryLbl = new JLabel("Infantry");
+        playerPanel.add(InfantryLbl); //just a test placeolder
+  
         
+        
+        //comp player code
+        
+        compPanel.setLayout(new GridLayout(0,5));
         
 //test compForce colors
         compForce.setOpaque(true);
@@ -56,8 +74,8 @@ public class JBattleDice {
         
         contentPane.add(playerLbl);
         contentPane.add(computerLbl);
-        contentPane.add(myForce);
-        contentPane.add(compForce);
+        contentPane.add(playerPanel);
+        contentPane.add(compPanel);
         contentPane.add(msgArea);
         contentPane.add(rollAreaLbl);
         contentPane.add(new JTextField(msgLblTxt));
@@ -73,7 +91,7 @@ public class JBattleDice {
 
         JFrame frame = new JFrame("BattleDice");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setPreferredSize(new Dimension(600, 400));
+        frame.getContentPane().setPreferredSize(new Dimension(800, 600));
 
         //Set up the content pane and components in GridLayout
         addComponentsToPane(frame.getContentPane());
