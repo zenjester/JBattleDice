@@ -24,10 +24,8 @@ public class JBattleDice {
         String msgLblTxt = "Please enter your Choices in this box";
         JPanel compPanel = new JPanel();
         JPanel playerPanel = new JPanel();
-        JLabel myForce = new JLabel(currentGame.genResult());
-        myForce.setOpaque(true);
-        myForce.setBackground(Color.GRAY);
-        myForce.setForeground(Color.WHITE);
+        
+      
         JLabel compForce = new JLabel(currentGame.genResult());
         JLabel playerLbl = new JLabel("Player");
         JLabel computerLbl = new JLabel("Computer");
@@ -54,23 +52,72 @@ public class JBattleDice {
         controlPanel1.add(endTurnBttn);
         
         //player panel code
-        playerPanel.setLayout(new GridLayout(2,6));
+        playerPanel.setOpaque(true);
+        playerPanel.setBackground(Color.GRAY);
+        playerPanel.setForeground(Color.YELLOW);
+        JLabel myGeneral = new JLabel(currentGame.genResult());
+        JLabel myInfantry = new JLabel(currentGame.genResult());
+        JLabel myArcher = new JLabel(currentGame.genResult());
+        JLabel myCavalry = new JLabel(currentGame.genResult());
+        JLabel myMages = new JLabel(currentGame.genResult());
+        JLabel myMonsters = new JLabel(currentGame.genResult());
+        
+        playerPanel.setLayout(new GridLayout(6,2));
         JLabel GeneralLbl= new JLabel("General");
         playerPanel.add(GeneralLbl);
-        playerPanel.add(myForce);
+        playerPanel.add(myGeneral);
         JLabel InfantryLbl = new JLabel("Infantry");
         playerPanel.add(InfantryLbl); //just a test placeolder
+        playerPanel.add(myInfantry);
+        JLabel ArcherLbl = new JLabel("Archer");
+        playerPanel.add(ArcherLbl); //just a test placeolder
+        playerPanel.add(myArcher);
+        JLabel CavalryLbl = new JLabel("Cavalry");
+        playerPanel.add(CavalryLbl); //just a test placeolder
+        playerPanel.add(myCavalry);
+        JLabel MagesLbl = new JLabel("Mages");
+        playerPanel.add(MagesLbl); //just a test placeolder
+        playerPanel.add(myMages);
+        JLabel MonstersLbl = new JLabel("Monsters");
+        playerPanel.add(MonstersLbl); //just a test placeolder
+        playerPanel.add(myMonsters);
   
         
         
         //comp player code
+        compPanel.setOpaque(true);
+        compPanel.setBackground(Color.BLUE);
+        compPanel.setForeground(Color.WHITE);
+        JLabel compGeneral = new JLabel(currentGame.genResult());
+        JLabel compInfantry = new JLabel(currentGame.genResult());
+        JLabel compArcher = new JLabel(currentGame.genResult());
+        JLabel compCavalry = new JLabel(currentGame.genResult());
+        JLabel compMages = new JLabel(currentGame.genResult());
+        JLabel compMonsters = new JLabel(currentGame.genResult());
         
-        compPanel.setLayout(new GridLayout(0,5));
+        compPanel.setLayout(new GridLayout(6,2));
+        JLabel compGeneralLbl= new JLabel("General");
+        compPanel.add(compGeneralLbl);
+        compPanel.add(compGeneral);
+        JLabel compInfantryLbl = new JLabel("Infantry");
+        compPanel.add(compInfantryLbl); //just a test placeolder
+        compPanel.add(compInfantry);
+        JLabel compArcherLbl = new JLabel("Archer");
+        compPanel.add(compArcherLbl); //just a test placeolder
+        compPanel.add(compArcher);
+        JLabel compCavalryLbl = new JLabel("Cavalry");
+        compPanel.add(compCavalryLbl); //just a test placeolder
+        compPanel.add(compCavalry);
+        JLabel compMagesLbl = new JLabel("Mages");
+        compPanel.add(compMagesLbl); //just a test placeolder
+        compPanel.add(compMages);
+        JLabel compMonstersLbl = new JLabel("Monsters");
+        compPanel.add(compMonstersLbl); //just a test placeolder
+        compPanel.add(compMonsters);
+        
         
 //test compForce colors
-        compForce.setOpaque(true);
-        compForce.setBackground(Color.BLUE);
-        compForce.setForeground(Color.CYAN);
+       
         
         contentPane.add(playerLbl);
         contentPane.add(computerLbl);
