@@ -3,3 +3,4 @@
 04.02.16 generating the enemy force do I need a string or an array going with string first
 05.02.16 refactor enemyForceGen
 27.02.16 switch to netbeans
+23.10.16 back to intellij
